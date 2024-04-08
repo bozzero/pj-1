@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900; 1.100.900&display=swap')
 :root{
     --cor-de-fundo:#8F76EB;
     --roxo:#8F76EB;
     --branco: #FFFFFF;
-    --branco: #FFFFFF;
-    --branco: #FFFFFF;
-    --branco: #FFFFFF;
     --botao-ativo: #3A375E;
+    --botao-inativo: rgba(164, 23, 137, 0.5);
+    --texto-fundo: rgba(32, 40, 251, 0.2);
 }
 
-
-
-
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--branco);
+  font-family: "Roboto", sans-serif;
+}
 
 .conteudo-principal {
     display: flex;
@@ -33,7 +35,7 @@
 }
 
 .botao{
-    font-family: "Crakra Petch", sans-serif;
+    font-family: "Roboto+Condensed", sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -48,19 +50,61 @@
     border-top: none;
 }
 
-.botoes {
-    display: block;
-}
-
-@media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;
-    }
-}
-
 .botao:first-child {
     border-radius: 40px 40px 0 0;
 }
+
+.botoes {
+    display: block;
+}
+botao.ativo{
+background-color: var(--botao-ativo);
+border-bottom: 4px solid var(--branco);
+}
+
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+.aba-conteudo.ativo{
+    display: block;
+}
+.aba-conteudo{
+    display: none;
+}
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+   }
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.contador{
+    display:flex;
+    justify-content: center;
+     flex-wrap: wrap;
+}
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+     min-width: 100px;
+}
+
+.contador-digito-numero{
+    font-size: 70px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+}
+
 
 @media screen and (min-width: 768px) {
     .botoes {
@@ -75,8 +119,3 @@
         border-radius: 0 40px 0 0;
     }
 }
-
-.ativo{
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
-    }
